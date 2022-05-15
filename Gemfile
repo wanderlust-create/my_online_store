@@ -60,8 +60,8 @@ end
 group :test do
   gem 'capybara'
   gem 'launchy'
-  gem 'simplecov'
   gem 'shoulda-matchers'
+  gem 'simplecov'
 end
 
 group :development do
