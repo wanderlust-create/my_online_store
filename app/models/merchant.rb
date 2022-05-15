@@ -1,3 +1,4 @@
 class Merchant < ApplicationRecord
-  validates :name, presence: true
+  has_many :items
+  validates :name, presence: true, uniqueness: true
 end
