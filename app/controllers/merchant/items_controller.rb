@@ -1,5 +1,4 @@
 class Merchant::ItemsController < ApplicationController
-
   def create
     @merchant = Merchant.find(params[:merchant_id])
     Item.create!(item_params)
@@ -10,7 +9,7 @@ class Merchant::ItemsController < ApplicationController
     merchant = Merchant.find_by(id: params[:merchant_id])
     Item.find(params[:id]).destroy
     redirect_to merchant_items_path(merchant)
-    flash[:alert] = "Your item was deleted"
+    flash[:alert] = 'Your item was deleted'
   end
 
   def edit
