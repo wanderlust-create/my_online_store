@@ -1,11 +1,9 @@
 require 'rails_helper'
 RSpec.describe 'New Item' do
+  let!(:merchant1) { Merchant.create!(name: 'Happy Lama') }
+
   describe 'merchant create new item' do
-    before :each do
-      Merchant.destroy_all
-    end
     it 'has a form for a Merchant to add an item to inventory' do
-      merchant1 = Merchant.create!(name: 'Happy Lama')
       visit merchant_items_path(merchant1.id)
 
       click_link 'Create New Item'
