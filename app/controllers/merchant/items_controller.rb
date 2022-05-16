@@ -13,6 +13,24 @@ class Merchant::ItemsController < ApplicationController
     redirect_to merchant_items_path(@merchant.id)
   end
 
+  def edit
+    @merchant = Merchant.find(params[:merchant_id])
+    @item = @merchant.items.find(params[:id])
+  end
+
+  def show
+    @merchant = Merchant.find(params[:merchant_id])
+    @item = @merchant.items.find(params[:id])
+  end
+
+  def update
+    merchant = Merchant.find(params[:merchant_id])
+    item = merchant.items.find(params[:id])
+    item.update(item_params)
+    redirect_to merchant_item_path(merchant.id, item.id)
+    flash.alert = "#{item.name} has been updated"
+  end
+
   private
 
   def item_params
