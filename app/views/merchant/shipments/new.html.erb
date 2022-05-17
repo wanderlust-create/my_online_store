@@ -1,0 +1,16 @@
+<%= form_with url: merchant_shipments_path(@merchant.id), method: :post, local: true do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :address %>
+<%= f.text_field :address %>
+
+<%= f.label :state %>
+<%= f.text_field :state %>
+
+<%= f.label :zip_code %>
+<%= f.number_field :zip_code %>
+
+<%= f.submit 'Submit' %>
+<% end %>
