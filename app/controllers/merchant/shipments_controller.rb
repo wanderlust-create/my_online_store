@@ -15,7 +15,13 @@ class Merchant::ShipmentsController < ApplicationController
   def new
     @merchant = Merchant.find(params[:merchant_id])
   end
-  
+
+  def show
+    @merchant = Merchant.find(params[:merchant_id])
+    @shipment = @merchant.shipments.find(params[:id])
+    @shipment_items = ShipmentItem.where(shipment_id: params[:id])
+  end
+
   private
 
   def shipment_params

@@ -4,6 +4,6 @@
     Name: <%= shipment.name %><br>
     Address: <%= shipment.address %>, <%= shipment.state %> <%= shipment.zip_code %><br>
     <%= link_to "Review Shipment Details", merchant_shipment_path(@merchant, shipment) %><br>
-</div>
+  </div>
 <% end %>
 <%= link_to 'Create New Shipment', new_merchant_shipment_path(@merchant.id) %>

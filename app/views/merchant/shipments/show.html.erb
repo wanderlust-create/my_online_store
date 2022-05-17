@@ -1,0 +1,17 @@
+<%= link_to "#{@merchant.name}'s' Shipments Page", merchant_shipments_path(@merchant) %><br><br>
+<center><h1><%= @shipment.name%></h1></center>
+  Name: <%= @shipment.name %><br>
+  Address: <%= @shipment.address %> <%= @shipment.state %>, <%= @shipment.zip_code %><br>
+  <h4>Items included in shipment:</h4>
+  <% @shipment_items.each_with_index do |i, index| %>
+    <div id="item-<%= index %>">
+      Item: <%= i.find_name %><br>
+      Price $: <%= i.find_unit_price %><br>
+      <div class="remove_item">
+        <%= form_with url:  merchant_shipment_item_path, method: :delete, local: true do |f| %>
+        <%= f.text_field :id, value: i.id, hidden: true %>
+        <%= f.submit "Remove #{i.find_name} from this shipment" %>
+      </div>
+    </div>
+  <% end %>
+  <% end %>
