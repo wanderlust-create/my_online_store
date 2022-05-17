@@ -1,8 +1,13 @@
 class Merchant::ItemsController < ApplicationController
   def create
     @merchant = Merchant.find(params[:merchant_id])
-    Item.create!(item_params)
-    redirect_to merchant_items_path(@merchant.id)
+    new_item = Item.new(item_params)
+    if new_item.save
+      redirect_to merchant_items_path(@merchant.id)
+    else
+      redirect_to new_merchant_item_path(@merchant.id)
+      flash[:alret] = new_item.errors.full_messages.to_sentence
+    end
   end
 
   def destroy
