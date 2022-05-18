@@ -16,11 +16,13 @@ Address: <%= @shipment.address %> <%= @shipment.state %>, <%= @shipment.zip_code
 </div>
 <% end %>
 <% end %>
-<h4>Add an item to this shipment using an item id:</h4>
-<div class="remove_item">
+<h4>Add an item to this shipment:</h4>
+<div class="add_item">
   <%= form_with url:  merchant_shipment_items_path(@merchant.id), method: :post, local: true do |f| %>
-  <%= f.label :item_id %>
-  <%= f.number_field :item_id %>
+  <% @merchant.items.each do |item| %>
+  <%= f.radio_button :item_id, item.id %>
+  <%= f.label :item_id, "#{item.name}" %>
+  <% end %>
   <%= f.text_field :shipment_id, value: @shipment.id, hidden: true %>
   <%= f.text_field :merchant_id, value: @shipment.merchant_id, hidden: true %>
   <%= f.submit "Add item to this shipment" %><br><br>

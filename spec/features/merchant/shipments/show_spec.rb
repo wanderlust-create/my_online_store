@@ -67,7 +67,7 @@ RSpec.describe 'Shipment Show page', type: :feature do
         expect(page).to have_button("Remove #{item2.name} from this shipment")
       end
 
-      fill_in 'Item', with: item4.id
+      choose "Banana"
       click_button 'Add item to this shipment'
 
       expect(current_path).to eq(merchant_shipment_path(merchant1, shipment1))
@@ -79,14 +79,13 @@ RSpec.describe 'Shipment Show page', type: :feature do
       end
     end
 
-    it 'will return an error message if item does not exist' do
-      visit merchant_shipment_path(merchant1, shipment1)
-
-      fill_in 'Item', with: 12_345
-      click_button 'Add item to this shipment'
-
-      expect(current_path).to eq(merchant_shipment_path(merchant1, shipment1))
-      expect(page).to have_content('Item must exist')
-    end
+#     it 'will return an error message if item does not exist' do
+#       visit merchant_shipment_path(merchant1, shipment1)
+#       fill_in 'Item', with: 12345
+#       click_button 'Add item to this shipment'
+#
+#       expect(current_path).to eq(merchant_shipment_path(merchant1, shipment1))
+#       expect(page).to have_content('Item must exist')
+#     end
   end
 end
