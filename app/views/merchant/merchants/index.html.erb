@@ -1,0 +1,6 @@
+<h1>All Merchants:</h1>
+<% @merchants.each do |merchant| %>
+<h4>Merchant: <%= merchant.name %></h4>
+<%= link_to "#{merchant.name} Item Index", merchant_items_path(merchant) %><br>
+<%= link_to "#{merchant.name} Shipments Index", merchant_shipments_path(merchant) %><br><br>
+<% end %>

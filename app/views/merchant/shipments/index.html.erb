@@ -1,9 +1,10 @@
+<%= link_to "#{@merchant.name} Items Index", merchant_items_path(@merchant) %><br>
 <center><h1><%= @merchant.name %>'s Shipments</h1></center>
 <% @merchant.shipments.each_with_index do |shipment, index| %>
   <div id="shipment-<%= index %>">
     Name: <%= shipment.name %><br>
     Address: <%= shipment.address %>, <%= shipment.state %> <%= shipment.zip_code %><br>
-    <%= link_to "Review Shipment Details", merchant_shipment_path(@merchant, shipment) %><br>
+    <%= link_to "Review Shipment Details", merchant_shipment_path(@merchant, shipment) %><br><br>
   </div>
 <% end %>
 <%= link_to 'Create New Shipment', new_merchant_shipment_path(@merchant.id) %>

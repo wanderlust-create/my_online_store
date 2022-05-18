@@ -5,22 +5,22 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-let!(:merchant1) { Merchant.create!(name: 'Happy Lama') }
-let!(:shipment1) {merchant1.shipments.create!(name: 'Dancing Dora', address: '123 Main St.', state: 'NY', zip_code: 12345) }
-let!(:item1) { merchant1.items.create!(name: 'Red', description: 'red lama', unit_price: 34.29) }
-let!(:item2) { merchant1.items.create!(name: 'Brown', description: 'brown lama', unit_price: 31.55) }
-let!(:item3) { merchant1.items.create!(name: 'Orange', description: 'orange lama', unit_price: 37.00) }
-let!(:item4) { merchant1.items.create!(name: 'Banana', description: 'banana rama', unit_price: 12.33) }
+merchant1 = Merchant.create!(name: 'Happy Lama')
+shipment1 = merchant1.shipments.create!(name: 'Dancing Dora', address: '123 Main St.', state: 'NY', zip_code: 12345)
+item1 = merchant1.items.create!(name: 'Red', description: 'red lama', unit_price: 34.29)
+item2 = merchant1.items.create!(name: 'Brown', description: 'brown lama', unit_price: 31.55)
+item3 = merchant1.items.create!(name: 'Orange', description: 'orange lama', unit_price: 37.00)
+item4 = merchant1.items.create!(name: 'Banana', description: 'banana rama', unit_price: 12.33)
 
-let!(:merchant2) { Merchant.create!(name: 'Happy Lama') }
-let!(:shipment2) {merchant1.shipments.create!(name: 'Ruth Bowen', address: '123 Main St.', state: 'NY', zip_code: 12345) }
-let!(:shipment3) {merchant1.shipments.create!(name: 'Juan Fernandez', address: '123 Main St.', state: 'NY', zip_code: 12345) }
-let!(:item5) { merchant1.items.create!(name: 'One', description: 'one lama', unit_price: 1.33) }
-let!(:item6) { merchant1.items.create!(name: 'Two', description: 'two lama', unit_price: 2.45) }
-let!(:item7) { merchant1.items.create!(name: 'Three', description: 'three lama', unit_price: 3.44) }
-let!(:item8) { merchant1.items.create!(name: 'Four', description: 'four rama', unit_price: 1.77) }
-let!(:item9) { merchant1.items.create!(name: 'Five', description: 'five rama', unit_price: 12.10) }
-let!(:item10) { merchant1.items.create!(name: 'Six', description: 'six rama', unit_price: 19.56) }
+merchant2 = Merchant.create!(name: 'Jumping Jacks')
+shipment2 = merchant2.shipments.create!(name: 'Ruth Bowen', address: '123 Main St.', state: 'NY', zip_code: 12345)
+shipment3 = merchant2.shipments.create!(name: 'Juan Fernandez', address: '123 Main St.', state: 'NY', zip_code: 12345)
+item5 = merchant2.items.create!(name: 'One', description: 'one lama', unit_price: 1.33)
+item6 = merchant2.items.create!(name: 'Two', description: 'two lama', unit_price: 2.45)
+item7 = merchant2.items.create!(name: 'Three', description: 'three lama', unit_price: 3.44)
+item8 = merchant2.items.create!(name: 'Four', description: 'four rama', unit_price: 1.77)
+item9 = merchant2.items.create!(name: 'Five', description: 'five rama', unit_price: 12.10)
+item10 = merchant2.items.create!(name: 'Six', description: 'six rama', unit_price: 19.56)
 
 
 

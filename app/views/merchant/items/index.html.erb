@@ -1,3 +1,5 @@
+<%= link_to "#{@merchant.name} Shipments Index", merchant_shipments_path(@merchant) %><br>
+<%= link_to 'Create New Item', new_merchant_item_path(@merchant.id) %>
 <center><h1><%= @merchant.name %>'s Items</h1></center>
 <% @merchant.items.each_with_index do |item, index| %>
   <div id="item-<%= index %>">
@@ -8,4 +10,3 @@
     <%= link_to "Delete #{item.name}", merchant_item_path(@merchant, item), method: :delete %><br><br>
 </div>
 <% end %>
-<%= link_to 'Create New Item', new_merchant_item_path(@merchant.id) %>
