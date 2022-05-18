@@ -1,17 +1,28 @@
 <%= link_to "#{@merchant.name}'s' Shipments Page", merchant_shipments_path(@merchant) %><br><br>
 <center><h1><%= @shipment.name%></h1></center>
-  Name: <%= @shipment.name %><br>
-  Address: <%= @shipment.address %> <%= @shipment.state %>, <%= @shipment.zip_code %><br>
-  <h4>Items included in shipment:</h4>
-  <% @shipment_items.each_with_index do |i, index| %>
-    <div id="item-<%= index %>">
-      Item: <%= i.find_name %><br>
-      Price $: <%= i.find_unit_price %><br>
-      <div class="remove_item">
-        <%= form_with url:  merchant_shipment_item_path, method: :delete, local: true do |f| %>
-        <%= f.text_field :id, value: i.id, hidden: true %>
-        <%= f.submit "Remove #{i.find_name} from this shipment" %>
-      </div>
-    </div>
-  <% end %>
-  <% end %>
+Name: <%= @shipment.name %><br>
+Address: <%= @shipment.address %> <%= @shipment.state %>, <%= @shipment.zip_code %><br>
+<h4>Items included in shipment:</h4>
+<% @shipment_items.each_with_index do |i, index| %>
+<div id="item-<%= index %>">
+  Item: <%= i.find_name %><br>
+  Price $: <%= i.find_unit_price %><br>
+  <div class="remove_item">
+    <%= form_with url:  merchant_shipment_item_path, method: :delete, local: true do |f| %>
+    <%= f.text_field :shipment_item_id, value: i.id, hidden: true %>
+    <%= f.text_field :shipment_id, value: i.shipment_id, hidden: true %>
+    <%= f.submit "Remove #{i.find_name} from this shipment" %><br><br>
+  </div>
+</div>
+<% end %>
+<% end %>
+<h4>Add an item to this shipment using an item id:</h4>
+<div class="remove_item">
+  <%= form_with url:  merchant_shipment_items_path(@merchant.id), method: :post, local: true do |f| %>
+  <%= f.label :item_id %>
+  <%= f.number_field :item_id %>
+  <%= f.text_field :shipment_id, value: @shipment.id, hidden: true %>
+  <%= f.text_field :merchant_id, value: @shipment.merchant_id, hidden: true %>
+  <%= f.submit "Add item to this shipment" %><br><br>
+</div>
+<% end %>
