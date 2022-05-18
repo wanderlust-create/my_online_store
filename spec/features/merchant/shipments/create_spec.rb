@@ -11,8 +11,8 @@ RSpec.describe 'New Shipment' do
 
       fill_in 'Name', with: 'Stressed Salmon'
       fill_in 'Address', with: '56 Main Hoops'
-      fill_in 'State', with: "MN"
-      fill_in 'Zip code', with: 12344
+      fill_in 'State', with: 'MN'
+      fill_in 'Zip code', with: 12_344
       click_button 'Submit'
 
       shipment1 = Shipment.last
@@ -32,15 +32,15 @@ RSpec.describe 'New Shipment' do
         expect(current_path).to eq(new_merchant_shipment_path(merchant1))
 
         fill_in 'Name', with: 'Leaping Lemon'
-        fill_in 'Zip code', with: 12322
+        fill_in 'Zip code', with: 12_322
         click_button 'Submit'
 
         shipment2 = Shipment.last
 
         expect(current_path).to eq(new_merchant_shipment_path(merchant1.id))
         expect(page).to have_content("Address can't be blank and State can't be blank")
-        expect(page).to_not have_content("Leaping Lemon")
-        expect(page).to_not have_content(12322)
+        expect(page).to_not have_content('Leaping Lemon')
+        expect(page).to_not have_content(12_322)
       end
     end
   end

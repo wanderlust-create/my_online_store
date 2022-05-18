@@ -9,9 +9,11 @@ class Merchant::ShipmentsController < ApplicationController
       flash[:alret] = new_shipment.errors.full_messages.to_sentence
     end
   end
+
   def index
     @merchant = Merchant.find(params[:merchant_id])
   end
+
   def new
     @merchant = Merchant.find(params[:merchant_id])
   end

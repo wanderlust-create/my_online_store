@@ -5,4 +5,6 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-  let!(:shipment1) {merchant1.shipments.create!(name: "Dancing Dora", address: "123 Main St.", state: "NY", zip_code: 12345 )}
+let!(:shipment1) do
+  merchant1.shipments.create!(name: 'Dancing Dora', address: '123 Main St.', state: 'NY', zip_code: 12_345)
+end
