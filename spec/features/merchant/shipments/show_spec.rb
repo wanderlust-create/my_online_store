@@ -3,7 +3,9 @@ require 'rails_helper'
 RSpec.describe 'Shipment Show page', type: :feature do
   describe 'Show Shipment attributes' do
     let!(:merchant1) { Merchant.create!(name: 'Happy Lama') }
-    let!(:shipment1) {merchant1.shipments.create!(name: 'Dancing Dora', address: '123 Main St.', state: 'NY', zip_code: 12345) }
+    let!(:shipment1) do
+      merchant1.shipments.create!(name: 'Dancing Dora', address: '123 Main St.', state: 'NY', zip_code: 12_345)
+    end
     let!(:item1) { merchant1.items.create!(name: 'Red', description: 'red lama', unit_price: 34.29) }
     let!(:item2) { merchant1.items.create!(name: 'Brown', description: 'brown lama', unit_price: 31.55) }
     let!(:item3) { merchant1.items.create!(name: 'Orange', description: 'orange lama', unit_price: 37.00) }
