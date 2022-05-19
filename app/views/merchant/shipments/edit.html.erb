@@ -1,0 +1,16 @@
+<%= form_with url: merchant_shipment_path(@merchant.id, @shipment.id), method: :patch, local: true do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name, :value => "#{@shipment.name}" %><br>
+
+<%= f.label :address %>
+<%= f.text_field :address, :value => "#{@shipment.address}" %><br>
+
+<%= f.label :state %>
+<%= f.text_field :state, :value => "#{@shipment.state}" %><br>
+
+<%= f.label :zip_code %>
+<%= f.text_field :zip_code, :value => "#{@shipment.zip_code}" %><br>
+
+<%= f.submit 'Submit'%>
+<% end %>

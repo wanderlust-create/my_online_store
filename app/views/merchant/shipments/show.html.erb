@@ -29,3 +29,4 @@ Address: <%= @shipment.address %> <%= @shipment.state %>, <%= @shipment.zip_code
   <%= f.submit "Add item to this shipment" %><br><br>
 </div>
 <% end %>
+<%= link_to "Update shipment details", edit_merchant_shipment_path(@merchant, @shipment) %><br><br>
