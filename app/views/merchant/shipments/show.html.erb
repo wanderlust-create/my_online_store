@@ -2,7 +2,8 @@
 <%= link_to "#{@merchant.name}'s shipments list", merchant_shipments_path(@merchant) %><br><br>
 <center><h1><%= @shipment.name%></h1></center>
 Name: <%= @shipment.name %><br>
-Address: <%= @shipment.address %> <%= @shipment.state %>, <%= @shipment.zip_code %><br>
+Address: <%= @shipment.address %> <%= @shipment.state %>, <%= @shipment.zip_code %><br><br>
+<%= link_to "Update shipment details", edit_merchant_shipment_path(@merchant, @shipment) %><br><br>
 <h4>Items included in shipment:</h4>
 <% @shipment_items.each_with_index do |i, index| %>
 <div id="item-<%= index %>">
