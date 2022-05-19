@@ -7,7 +7,7 @@ RSpec.describe 'Merchant Items Edit Page', type: :feature do
   let!(:item3) { merchant1.items.create!(name: 'Orange', description: 'orange lama', unit_price: 37.00) }
 
   context 'there is a link on the Merchant Item index page to update the item'
-  it 'will update item attributes and redirect to the item show page after update' do
+  it 'will update item attributes and redirect to the item index page after update' do
     visit merchant_items_path(merchant1.id)
 
     within('#item-1') do

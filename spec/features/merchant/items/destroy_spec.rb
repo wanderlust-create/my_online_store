@@ -7,7 +7,7 @@ RSpec.describe 'Merchant Destroy Item', type: :feature do
   let!(:item3) { merchant1.items.create!(name: 'Orange', description: 'orange lama', unit_price: 37.00) }
 
   context 'there is a link on the Merchant Item index page to delete an item'
-  it 'will delete an item and redirect to the merchant index page where you can lo longer see the items' do
+  it 'will delete an item and redirect to the merchant index page where you can no longer see the items' do
     visit merchant_items_path(merchant1.id)
 
     within('#item-0') do
