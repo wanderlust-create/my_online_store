@@ -1,4 +1,5 @@
-<%= link_to "#{@merchant.name}'s' Index Page", merchant_items_path(@merchant) %><br><br>
+<%= link_to "#{@merchant.name}'s items list", merchant_items_path(@merchant) %><br><br>
+<%= link_to "#{@merchant.name}'s shipments list", merchant_shipments_path(@merchant) %><br><br>
 <center><h1><%= @item.name%></h1></center>
 <p>Description: <%= @item.description%></p>
 <p>Current Price: $<%= @item.unit_price%></p>
