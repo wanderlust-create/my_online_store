@@ -1,5 +1,4 @@
 class Merchant::ItemsController < ApplicationController
-
   def create
     @merchant = Merchant.find(params[:merchant_id])
     new_item = Item.new(item_params)

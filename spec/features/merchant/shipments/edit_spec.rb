@@ -2,7 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'Edit Shipment Edit Page', type: :feature do
   let!(:merchant1) { Merchant.create!(name: 'Happy Lama') }
-  let!(:shipment1) { merchant1.shipments.create!(name: 'Dancing Dora', address: '123 Main St.', state: 'NY', zip_code: 30187) }
+  let!(:shipment1) do
+    merchant1.shipments.create!(name: 'Dancing Dora', address: '123 Main St.', state: 'NY', zip_code: 30_187)
+  end
 
   context 'there is a link on the Shipment show page to update the shipment'
   it 'will update shipment attributes and redirect to the show page with the updated attributes' do
