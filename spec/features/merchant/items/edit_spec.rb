@@ -25,7 +25,7 @@ RSpec.describe 'Merchant Items Edit Page', type: :feature do
 
     click_button 'Submit'
 
-    expect(current_path).to eq(merchant_item_path(merchant1, item2))
+    expect(current_path).to eq(merchant_items_path(merchant1))
 
     expect(page).to have_content('Purple has been updated')
     expect(page).to have_content('Purple')
