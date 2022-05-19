@@ -22,7 +22,7 @@ Address: <%= @shipment.address %> <%= @shipment.state %>, <%= @shipment.zip_code
   <%= form_with url:  merchant_shipment_items_path(@merchant.id), method: :post, local: true do |f| %>
   <% @merchant.items.each do |item| %>
   <%= f.radio_button :item_id, item.id %>
-  <%= f.label :item_id, "#{item.name}" %>
+  <%= f.label :item_id, "#{item.name}", value: item.id %>
   <% end %>
   <%= f.text_field :shipment_id, value: @shipment.id, hidden: true %>
   <%= f.text_field :merchant_id, value: @shipment.merchant_id, hidden: true %>

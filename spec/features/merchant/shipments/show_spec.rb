@@ -68,7 +68,6 @@ RSpec.describe 'Shipment Show page', type: :feature do
       end
 
       choose item4.name
-      # choose "Banana", :visible => :hidden
       click_button 'Add item to this shipment'
 
       expect(current_path).to eq(merchant_shipment_path(merchant1, shipment1))
