@@ -5,7 +5,7 @@
   <div id="item-<%= index %>">
     Name: <%= item.name %><br>
     Description: <%= item.description %><br>
-    Price: $<%= item.unit_price %><br>
+    Price: $<%= item.display_price %><br>
     <%= link_to "Update #{item.name}", edit_merchant_item_path(@merchant, item) %><br>
     <%= link_to "Delete #{item.name}", merchant_item_path(@merchant, item), method: :delete %><br><br>
 </div>
