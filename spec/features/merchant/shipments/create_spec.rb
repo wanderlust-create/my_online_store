@@ -12,7 +12,7 @@ RSpec.describe 'New Shipment' do
       fill_in 'Name', with: 'Stressed Salmon'
       fill_in 'Address', with: '56 Main Hoops'
       fill_in 'State', with: 'MN'
-      fill_in 'Zip code', with: 12_344
+      fill_in 'Zip code', with: 12344
       click_button 'Submit'
 
       shipment1 = Shipment.last
