@@ -12,7 +12,7 @@ Address: <%= @shipment.address %> <%= @shipment.state %>, <%= @shipment.zip_code
   <div class="remove_item">
     <%= form_with url:  merchant_shipment_item_path, method: :delete, local: true do |f| %>
     <%= f.text_field :shipment_item_id, value: i.id, hidden: true %>
-    <%= f.text_field :shipment_id, value: i.shipment_id, hidden: true %>
+    <%= f.text_field :shipment_id, value: i.shipment_id, hidden: true %><br>
     <%= f.submit "Remove #{i.find_name} from this shipment" %><br><br>
   </div>
 </div>
