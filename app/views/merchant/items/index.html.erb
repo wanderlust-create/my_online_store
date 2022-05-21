@@ -1,6 +1,6 @@
+<center><h1><%= @merchant.name %>'s Items List</h1></center>
 <%= link_to "#{@merchant.name}'s shipments list", merchant_shipments_path(@merchant) %><br><br>
 <%= link_to 'Create New Item', new_merchant_item_path(@merchant.id) %>
-<center><h1><%= @merchant.name %>'s Items List</h1></center>
 <% @merchant.items.each_with_index do |item, index| %>
   <div id="item-<%= index %>">
     Name: <%= item.name %><br>

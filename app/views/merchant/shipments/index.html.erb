@@ -1,5 +1,5 @@
-<%= link_to "#{@merchant.name}'s items list", merchant_items_path(@merchant) %><br><br>
 <center><h1><%= @merchant.name %>'s Shipments</h1></center>
+<%= link_to "#{@merchant.name}'s items list", merchant_items_path(@merchant) %><br><br>
 <% @merchant.shipments.each_with_index do |shipment, index| %>
   <div id="shipment-<%= index %>">
     Name: <%= shipment.name %><br>
