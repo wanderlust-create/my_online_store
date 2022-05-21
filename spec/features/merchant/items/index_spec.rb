@@ -13,7 +13,7 @@ RSpec.describe 'Merchant Index Items', type: :feature do
     within('#item-0') do
       expect(page).to have_content(item1.name)
       expect(page).to have_content(item1.description)
-      expect(page).to have_content(item1.unit_price)
+      expect(page).to have_content(item1.display_price)
       expect(page).to have_link("Update #{item1.name}")
       expect(page).to have_link("Delete #{item1.name}")
     end
@@ -21,7 +21,7 @@ RSpec.describe 'Merchant Index Items', type: :feature do
     within('#item-1') do
       expect(page).to have_content(item2.name)
       expect(page).to have_content(item2.description)
-      expect(page).to have_content(item2.unit_price)
+      expect(page).to have_content(item2.display_price)
       expect(page).to have_link("Update #{item2.name}")
       expect(page).to have_link("Delete #{item2.name}")
     end
@@ -29,7 +29,7 @@ RSpec.describe 'Merchant Index Items', type: :feature do
     within('#item-2') do
       expect(page).to have_content(item3.name)
       expect(page).to have_content(item3.description)
-      expect(page).to have_content(item3.unit_price)
+      expect(page).to have_content(item3.display_price)
       expect(page).to have_link("Update #{item3.name}")
       expect(page).to have_link("Delete #{item3.name}")
     end

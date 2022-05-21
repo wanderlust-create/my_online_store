@@ -19,7 +19,7 @@ RSpec.describe 'New Item' do
       expect(current_path).to eq(merchant_items_path(merchant1))
       expect(page).to have_content(ball.name)
       expect(page).to have_content(ball.description)
-      expect(page).to have_content(ball.unit_price)
+      expect(page).to have_content(ball.display_price)
     end
 
     describe 'if new item information is incomplete' do
