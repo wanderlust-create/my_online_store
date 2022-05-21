@@ -1,0 +1,8 @@
+<h1>Add your name to create an account:</h1>
+<%= form_with url: merchants_path, method: :post, local: true do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.submit 'Submit' %>
+<% end %>
