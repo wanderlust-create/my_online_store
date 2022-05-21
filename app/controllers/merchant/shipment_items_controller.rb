@@ -4,9 +4,9 @@ class Merchant::ShipmentItemsController < ApplicationController
     merchant = Merchant.find(params[:merchant_id])
     new_shipment_item = ShipmentItem.new(shipment_item_params)
     if new_shipment_item.save
-      redirect_to merchant_shipment_path(merchant.id, shipment.id)
+      redirect_to merchant_shipment_path(merchant, shipment)
     else
-      redirect_to merchant_shipment_path(merchant.id, shipment.id)
+      redirect_to merchant_shipment_path(merchant, shipment)
       flash[:alret] = new_shipment_item.errors.full_messages.to_sentence
     end
   end

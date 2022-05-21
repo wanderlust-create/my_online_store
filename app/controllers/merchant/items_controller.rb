@@ -11,8 +11,8 @@ class Merchant::ItemsController < ApplicationController
   end
 
   def destroy
-    merchant = Merchant.find(params[:merchant_id])
     Item.find(params[:id]).destroy
+    merchant = Merchant.find(params[:merchant_id])
     redirect_to merchant_items_path(merchant)
     flash[:alert] = 'Your item was deleted'
   end
