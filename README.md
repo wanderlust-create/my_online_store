@@ -16,7 +16,8 @@
 - Add inventory items to a shipment, using a selection to reduce errors
 - Remove inventory items from a shipment<br><br>
 
-### I created this application for the technical challenge of applying for the Shopify Backend Engineering program. You can see it in action by visiting the [My Online Store Replit](https://MyOnlineStore.wanderlusting.repl.co) or on your local computer by following the instructions below. <br><br>
+### I created this application for the technical challenge when applying for the Shopify Backend Engineering program. 
+You can see it in action by visiting the [My Online Store Replit](https://MyOnlineStore.wanderlusting.repl.co) or on your local computer by following the instructions below. <br><br>
 
 <details open="open">
   <summary>Table of Contents</summary>
