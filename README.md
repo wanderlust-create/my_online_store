@@ -6,7 +6,7 @@
 
 ## My online shop serves as a platform for merchants to add inventroy, add shipments to customers, and make adjustments to their inventory and shipments.
 
-### This application was created to submit with my application to Shopify's Backend Engineering program. 
+### This application was created to submit with my application to Shopify's Backend Engineering intern program. 
 You can see it in action by visiting the [My Online Store Replit](https://MyOnlineStore.wanderlusting.repl.co) or on your local computer by following the instructions below. <br><br>
 
 ### The specifics: what can a merchant do on My Online Store app?
