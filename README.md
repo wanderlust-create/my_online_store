@@ -86,7 +86,7 @@ On your local system, open a terminal session to run the following commands:
 
 ----------
 
-#### How to use this app
+### How to use this application
 
 ##### Create your merchant account:
 - Navigate to the welcome page
