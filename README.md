@@ -4,7 +4,11 @@
 [![GitHub version](https://badge.fury.io/gh/wanderlust-create%2Fmy_online_store.svg)](https://badge.fury.io/gh/wanderlust-create%2Fmy_online_store)
 [![PRsWelcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com)
 
-## My online shop serves as a platform for merchants to keep track of shop inventory and shipments to their customers. 
+## My online shop serves as a platform for merchants to add inventroy, add shipments to customers, and make adjustments to their inventory and shipments.
+
+### This application was created to submit with my application to Shopify's Backend Engineering program. 
+You can see it in action by visiting the [My Online Store Replit](https://MyOnlineStore.wanderlusting.repl.co) or on your local computer by following the instructions below. <br><br>
+
 ### The specifics: what can a merchant do on My Online Store app?
 - Create a merchant account
 - Create inventory items
@@ -16,9 +20,7 @@
 - Add inventory items to a shipment, using a selection to reduce errors
 - Remove inventory items from a shipment<br><br>
 
-### I created this application for the technical challenge when applying for the Shopify Backend Engineering program. 
-You can see it in action by visiting the [My Online Store Replit](https://MyOnlineStore.wanderlusting.repl.co) or on your local computer by following the instructions below. <br><br>
-
+### My Online Store application details 
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
@@ -93,7 +95,7 @@ On your local system, open a terminal session to run the following commands:
 - Navigate to the welcome page
 - Click the link to `Create New Merchant Account`  link on the top
 - Add your name in the space provided
-- Click Submit
+- Click `Submit`
 
 ##### View a list of all my items:
 - From the page that lists your shipments, click the link to `Items list`
