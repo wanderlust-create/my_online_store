@@ -19,7 +19,7 @@ RSpec.describe 'Shipment Show page', type: :feature do
 
     it 'will list the shipment attribites' do
       visit merchant_shipment_path(merchant1, shipment1)
-save_and_open_page
+
       expect(page).to have_content(shipment1.name)
       expect(page).to have_content(shipment1.address)
       expect(page).to have_content(shipment1.state)
