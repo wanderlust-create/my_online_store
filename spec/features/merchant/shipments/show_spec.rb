@@ -19,7 +19,7 @@ RSpec.describe 'Shipment Show page', type: :feature do
 
     it 'will list the shipment attribites' do
       visit merchant_shipment_path(merchant1, shipment1)
-
+save_and_open_page
       expect(page).to have_content(shipment1.name)
       expect(page).to have_content(shipment1.address)
       expect(page).to have_content(shipment1.state)
@@ -27,19 +27,19 @@ RSpec.describe 'Shipment Show page', type: :feature do
 
       within('#item-0') do
         expect(page).to have_content(item1.name)
-        expect(page).to have_content(item1.unit_price)
+        expect(page).to have_content(item1.display_price)
         expect(page).to have_button("Remove #{item1.name} from this shipment")
       end
 
       within('#item-1') do
         expect(page).to have_content(item2.name)
-        expect(page).to have_content(item2.unit_price)
+        expect(page).to have_content(item2.display_price)
         expect(page).to have_button("Remove #{item2.name} from this shipment")
       end
 
       within('#item-2') do
         expect(page).to have_content(item3.name)
-        expect(page).to have_content(item3.unit_price)
+        expect(page).to have_content(item3.display_price)
         expect(page).to have_button("Remove #{item3.name} from this shipment")
       end
     end
@@ -49,7 +49,7 @@ RSpec.describe 'Shipment Show page', type: :feature do
 
       within('#item-1') do
         expect(page).to have_content(item2.name)
-        expect(page).to have_content(item2.unit_price)
+        expect(page).to have_content(item2.display_price)
         expect(page).to have_button("Remove #{item2.name} from this shipment")
       end
 
@@ -63,7 +63,7 @@ RSpec.describe 'Shipment Show page', type: :feature do
 
       within('#item-1') do
         expect(page).to have_content(item2.name)
-        expect(page).to have_content(item2.unit_price)
+        expect(page).to have_content(item2.display_price)
         expect(page).to have_button("Remove #{item2.name} from this shipment")
       end
 
@@ -74,18 +74,9 @@ RSpec.describe 'Shipment Show page', type: :feature do
 
       within('#item-3') do
         expect(page).to have_content(item4.name)
-        expect(page).to have_content(item4.unit_price)
+        expect(page).to have_content(item4.display_price)
         expect(page).to have_button("Remove #{item4.name} from this shipment")
       end
     end
   end
-
-  #     it 'will return an error message if item does not exist' do
-  #       visit merchant_shipment_path(merchant1, shipment1)
-  #       fill_in 'Item', with: 12345
-  #       click_button 'Add item to this shipment'
-  #
-  #       expect(current_path).to eq(merchant_shipment_path(merchant1, shipment1))
-  #       expect(page).to have_content('Item must exist')
-  #     end
 end

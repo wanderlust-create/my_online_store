@@ -8,7 +8,7 @@ Address: <%= @shipment.address %> <%= @shipment.state %>, <%= @shipment.zip_code
 <% @shipment_items.each_with_index do |i, index| %>
 <div id="item-<%= index %>">
   Item: <%= i.find_name %><br>
-  Price $: <%= i.find_unit_price %><br>
+  Price $: <%= i.find_unit_price_display %><br>
   <div class="remove_item">
     <%= form_with url:  merchant_shipment_item_path, method: :delete, local: true do |f| %>
     <%= f.text_field :shipment_item_id, value: i.id, hidden: true %>

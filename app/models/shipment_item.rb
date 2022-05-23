@@ -6,7 +6,8 @@ class ShipmentItem < ApplicationRecord
     Item.find(item_id).name
   end
 
-  def find_unit_price
-    Item.find(item_id).unit_price
+  def find_unit_price_display
+    unit_price = Item.find(item_id).unit_price
+    format('%.2f', unit_price)
   end
 end
