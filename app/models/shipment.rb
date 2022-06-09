@@ -6,5 +6,4 @@ class Shipment < ApplicationRecord
   validates :address, presence: true
   validates :state, presence: true
   validates :zip_code, presence: true
-  validates :zip_code, presence: true
 end
